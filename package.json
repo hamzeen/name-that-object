@@ -12,7 +12,7 @@
     "build-js": "NODE_ENV=production browserify -e src/app.js -t babelify -g envify -g unassertify -g uglifyify | sed 's/@@@@@/'$(rev < api_key)'/g' > app.js",
     "build-css": "stylus -c -u nib style/main.styl -o app.css",
     "deploy": "npm run build && gcloud app deploy --project=thing-translator --quiet",
-    "start": "node app.js",
+    "start": "parallelshell 'npm run watch' 'npm run watch-style'",
     "dev-start": "parallelshell 'npm run watch' 'npm run watch-style'",
     "watch": "budo src/app.js --live --host localhost -- -t babelify",
     "watch-style": "stylus -c -u nib -w style/main.styl -o app.css"
