@@ -1,4 +1,3 @@
-// const googleKey = 'AIzaSyDVFenMOnYaFQW_4H1kWnp2hLpx3urIQXc';
 const googleKey = '@@@@@'
     .split('')
     .reverse()
