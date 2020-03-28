@@ -1,4 +1,8 @@
-const googleKey = 'AIzaSyDVFenMOnYaFQW_4H1kWnp2hLpx3urIQXc';
+// const googleKey = 'AIzaSyDVFenMOnYaFQW_4H1kWnp2hLpx3urIQXc';
+const googleKey = '@@@@@'
+    .split('')
+    .reverse()
+    .join('');
 
 export const apiUrls = {
   cloudVision: 'https://vision.googleapis.com/v1/images:annotate?key=' + googleKey,
